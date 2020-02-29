@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.active{
+				color: #FF0000;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id='box'>
+			
+		</ul>
+		<script type="text/javascript">
+			var ul=document.getElementById('box');
+			//创建节点
+			var li1=document.createElement('li');
+			var li2=document.createElement('li');
+			//innerText 只设置文本
+			li1.innerText='123'
+			li2.innerHTML='<a href="#">12345</a>';
+			li1.setAttribute('class','active')
+			console.log(li1,li2);
+			// li1.children[0].style.fontSize='22px';
+			ul.appendChild(li1);
+			// ul.appendChild(li2);
+			ul.insertBefore(li2,li1);
+			ul.removeChild(li2);
+		</script>
+	</body>
+</html>

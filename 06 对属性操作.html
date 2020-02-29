@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			p.active{
+				color: #0000FF;
+			}
+			.a{
+				color: #DC143C;
+				font-size: 30px;
+			}
+			.b{
+				color: #7FFF00;
+				font-size: 30px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<p title="我的班级" id="p1" class="a">21</p>
+		<script type="text/javascript">
+			//如果是自定义的属性,要在文档上能看到,通过setAttribute设置属性
+			var p1=document.getElementById('p1');
+			console.log(p1.getAttribute('title'));
+			console.log(p1.getAttribute('id'));
+			console.log(p1.getAttribute('class'));
+			p1.setAttribute('class','b');
+			p1.setAttribute('ada123ad','12a31');
+			
+			console.log(p1.className);
+			console.log(p1.title);
+			console.log(p1.getAttribute('ada123ad'));
+			p1.abc=123;//能设置但是不能显示
+			console.dir(p1);
+			console.log(p1.getAttribute('abc'));//null
+			p1.onclick=function(){
+				this.className='active '+this.className
+			}
+		</script>
+	</body>
+</html>
